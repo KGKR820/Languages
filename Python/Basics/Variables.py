@@ -42,7 +42,14 @@ x = {0: "Merry", 1: "Christmas"}
 x = {2, 3, 6, 7}
 x = True
 
-print(random.randrange(3, 56))  # Random
+# Random
+print(random.randrange(3, 56))
+
+# Typeof
+print(type(x))
+
+# isinstance
+print(isinstance(x, (bool, int, complex)))
 
 x = """HI
 Guys
@@ -82,3 +89,29 @@ x.insert(1, "Ac")
 x.extend(y)
 x.remove("b")
 print(len(x))
+
+# Conditionals
+if 2 > 3:
+    print("2>3")
+else:
+    print("OOOOOOO")
+
+# Taking Input
+a = 22
+b = "hello"
+print(a, b, sep="-", file=open("hi.txt", "w"))
+
+name = input("Say my name : ")
+print(name + " :", "You are godamnn right")
+
+quantity = int(input("How much should we cook jessy : "))
+if quantity > 16:
+    print("That's a lot we should get moving dumbass")
+else:
+    print(
+        "Jessie you do this job i have some unfinished bussiness that i need to take care of"
+    )
+
+# Strings
+str = "Hello"
+# str[0] = "B" # This is Error as str is immutable(Literal Strings are immutable)
