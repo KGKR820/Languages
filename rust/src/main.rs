@@ -78,10 +78,10 @@ fn main() {
     // ====== Ownership ======
     // Every value has a single owner [every variable has one value,and it is it's sole owner]
     /* Ownership Rules:
-     * 1. Each value in rust has a variable that's it's owner
-     * 2. There can be only one owner at a time
-     * 3. When owner goes out of scope , the value will be dropped
-     */
+     1. Each value in rust has a variable that's it's owner
+     2. There can be only one owner at a time
+     3. When owner goes out of scope , the value will be dropped
+    */
 
     // Rule-1:
 
@@ -122,6 +122,17 @@ fn main() {
     account.fetch_balance();
     account.withdraw(22.69);
     account.fetch_balance();
+
+    // ====== Shadowing ======
+    // Shadowing is different from setting a variable as mut
+    let s = 9;
+    // Here you can see that s=9 is shadowed by s = s+11
+    let s = s + 11;
+    {
+        let s = s * 2;
+        println!("Value of s in Inner Scope : {}", s);
+    }
+    println!("Value of s : {}", s);
 }
 
 // hello_world() is declared after main even after that main can access it (Hoisting in JS)

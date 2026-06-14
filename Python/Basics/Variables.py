@@ -34,6 +34,7 @@ def func():
 func()
 print(x)
 
+# All Data Types
 x = 1j
 x = [2, 3, 4]
 x = (2, 4, 5)
@@ -86,15 +87,17 @@ x = [2, 3, "Hello"]
 print(x, len(x), type(x))
 x.append(True)
 x.insert(1, "Ac")
-x.extend(y)
-x.remove("b")
+x.extend({"a", "b"})
+x.remove("a")
 print(len(x))
+print(x)
 
 # Conditionals
 if 2 > 3:
     print("2>3")
 else:
     print("OOOOOOO")
+
 
 # Taking Input
 a = 22
